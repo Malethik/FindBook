@@ -32,7 +32,7 @@ const Book: React.FC = () => {
     if (query.trim()) {
       fetchData()
     }
-  }, [query]); 
+  }, ); 
 
   return (
     <div>
