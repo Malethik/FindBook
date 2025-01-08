@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../enverioments/api';
 import { BookModel } from '../model/models';
-
+import './book.css';
 
 const Book: React.FC = () => {
   const [query, setQuery] = useState<string>(""); 
@@ -44,30 +44,28 @@ const Book: React.FC = () => {
       />
       <button onClick={fetchData}>Cerca</button> 
 
-     
-      {data.length > 0 ? (
-        <ul>
+        <ul className='cards'>
           {data.map((book: any) => (
             <li key={book["@id"]}>
-              <h3>{book.Title}</h3>
-              <p><strong>Autore:</strong> {book.Author}</p>
-              <p><strong>Idioma:</strong> {book.Language}</p>
-              <p><strong>Numero de paginas:</strong> {book.PagesInFile}</p>
-              <img
-                src={book.cover}
-                alt={`Copertura di ${book.Title}`}
-                style={{ width: "100px", height: "150px" }}
-              />
-              <br />
-              <a href={book.downloadUrl} target="_blank" rel="noopener noreferrer">
-                Descargar el libro
-              </a>
+                <div className='card'>
+                    <h3>{book.Title}</h3>
+                    <p><strong>Autore:</strong> {book.Author}</p>
+                    <p><strong>Idioma:</strong> {book.Language}</p>
+                    <p><strong>Numero de paginas:</strong> {book.PagesInFile}</p>
+                    <img
+                    src={book.cover}
+                    alt={`Copertura di ${book.Title}`}
+                    style={{ width: "100px", height: "150px" }}
+                    />
+                    <br />
+                    <a href={book.downloadUrl} target="_blank" rel="noopener noreferrer">
+                    Descargar el libro
+                    </a>
+                </div>
             </li>
           ))}
         </ul>
-      ) : (
-        <p>Ningun libro encontrado</p>
-      )}
+      
     </div>
   );
 };
