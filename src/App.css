@@ -4,4 +4,5 @@
   background-repeat: repeat;
   background-position: top left;
   background-size: auto;
+  min-height: 99vh;
 }
