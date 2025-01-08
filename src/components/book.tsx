@@ -48,7 +48,7 @@ const Book: React.FC = () => {
           {data.map((book: any) => (
             <li key={book["@id"]}>
                 <div className='card'>
-                    <h3>{book.Title}</h3>
+                    <h2>{book.Title}</h2>
                     <p><strong>Autore:</strong> {book.Author}</p>
                     <p><strong>Idioma:</strong> {book.Language}</p>
                     <p><strong>Numero de paginas:</strong> {book.PagesInFile}</p>

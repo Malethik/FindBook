@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# 📚 Book Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Book Finder is a simple React application that allows users to search for books based on their titles. The application fetches data from a free API to provide book information to users.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+Search for books by title.
+Fetches book information using a free API.
+Built entirely with React, without any external libraries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+React: For building the user interface.
+JavaScript and TypeScript: For logic and application structure.
+HTML and CSS: For layout and styling.
 
-### `npm test`
+## How to Use
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone repository:
 
-### `npm run build`
+```bash
+git clone https://github.com/Malethik/FindBook
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+cd FindBook
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install dependencies:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Start the development server:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Open your browser and go to:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+http://localhost:3000
+```
 
-## Learn More
+## API Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application uses the RapidAPI API to fetch book data. For more information, visit the API documentation: [API Documentation Link](https://rapidapi.com/cinnamon17/api/libros1)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Development Stages
+
+First, I created a header file to contain the title, ensuring compliance with HTML standards. Then, I built the homepage, which calls the Book component. Inside the Book component, there is an input field that passes data to the query, which is used to perform the fetch operation on the API.
+
+In the options variable, I included the authentication header and specified the request method (in this case, GET). The API configuration is located in the environments folder, and I placed the models in the models folder.
